@@ -20,6 +20,6 @@ public class CsvHelperExample
     {
         using var sr = new StreamReader(path);
         using var cr = new CsvReader(sr, CultureInfo.InvariantCulture);
-        return cr.GetRecords<Person>();
+        return cr.GetRecords<Person>().ToList();
     }
 }
